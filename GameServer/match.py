@@ -997,7 +997,13 @@ class Chance:
     def has_chance(player, chance):
 
         has = player.chance_cards.count(chance) != 0
-        Logger.log(player.username + " has chance card: " + str(chance) + str(has))
+
+        if has:
+            Logger.log(player.username + " has chance card: " + str(chance))
+        else:
+            Logger.log(player.username + " does not have chance card: " + str(chance))
+
+        Logger.log(player.username + "'s current owned chance cards: " + str(player.chance_cards))
 
         return has
 
@@ -1017,6 +1023,8 @@ class Chance:
             else:
                 matches = player.move == Moves.SCRATCH
 
+        Logger.log(player.username + "'s selected move: " + str(player.move))
+        Logger.log(player.username + "'s chance they with to use: " + str(chance))
         Logger.log(player.username + " chance matches move: " + str(matches))
         return matches
 
