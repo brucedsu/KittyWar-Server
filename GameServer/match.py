@@ -995,7 +995,11 @@ class Chance:
     # Checks if the player has the chance card they selected to use
     @staticmethod
     def has_chance(player, chance):
-        return player.chance_cards.count(chance) != 0
+
+        has = player.chance_cards.count(chance) != 0
+        Logger.log(player.username + " has chance card: " + str(chance) + str(has))
+
+        return has
 
     # Check if the chance corresponds with the selected move
     @staticmethod
@@ -1013,6 +1017,7 @@ class Chance:
             else:
                 matches = player.move == Moves.SCRATCH
 
+        Logger.log(player.username + " chance matches move: " + str(matches))
         return matches
 
     # Check if a particular chance should be used before settling the strategies

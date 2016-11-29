@@ -92,7 +92,7 @@ class Session(Thread):
                 self.match.process_request(self.userprofile['username'], request)
                 self.match.lock.release()
 
-                # If problem with match end and notify client
+                # If problem with match end
                 if not self.match.match_valid:
                     self.match = None
 
