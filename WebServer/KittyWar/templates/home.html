@@ -5,18 +5,31 @@
 <html lang="en">
 
 <head>
-    
-    <link rel = "stylesheet" type = "text/css" href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel = "stylesheet" type = "text/css" href = "{% static 'kittywar.css' %}" />
-    <title> Kitty War </title>
+    <meta charset="utf-8">
+    <title>Kitty War</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'main.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'normalize.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'responsive.css' %}" />
 </head>
 
 <body>
+<header>
+    <div id="index-title">
+    <h1>Kitty War</h1>
+    <a href="{% url 'kittywar:logout' %}"> <b>Log out</b> </a>
+    </div>
+    <nav>
+      <!--unordered list-->
+      <ul>
+        <li><a href="{% url 'kittywar:home' %}" class="selected">Cats</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<div class = "container text-center">  
-    <h1> User Home Page </h1>
-    <a href="{% url 'kittywar:logout' %}"> Log out </a>
-</div>
+</header>
 
 <footer>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
