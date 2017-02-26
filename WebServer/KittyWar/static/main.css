@@ -12,9 +12,8 @@ h1 {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-
-  background: url(cat/background.jpg);
+  background: url(cat/register.jpg) no-repeat center;
+  -webkit-background-size: cover;
 }
 
 /*image change as the windows change */
@@ -32,8 +31,7 @@ h3 {
   color: #bdc3c7;
 }
 header {
-  background: url(cat/header.jpg);
-  border-color: #ff6cb5;
+
   padding-bottom: 0;
 }
 
@@ -212,10 +210,7 @@ footer {
 nav {
   background: url(../img/header-background.jpg);
 }
-
-
-
-
+/*register html*/
 
 
 
