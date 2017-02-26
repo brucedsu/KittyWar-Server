@@ -158,6 +158,15 @@ def login_mobile_view(request):
 def home_view(request):
     return render(request, 'home.html')
 
+# Chance Card View
+@login_required(login_url='/kittywar/login/')
+def chance_view(request):
+    return render(request, 'chance.html')
+
+# play View
+@login_required(login_url='/kittywar/login/')
+def play_view(request):
+    return render(request, 'play.html')
 
 # Logout View
 def logout_view(request):
