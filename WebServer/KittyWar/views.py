@@ -156,7 +156,11 @@ def login_mobile_view(request):
 # Home View
 @login_required(login_url='/kittywar/login/')
 def home_view(request):
-    return render(request, 'home.html')
+    template = 'home.html'
+    user_profile = UserProfile.objects.get(user=request.user)
+    print(user_profile.cats.all()[0].title)
+    context = {'myvar': user_profile.cats.all()}
+    return render(request, template, context)
 
 # Chance Card View
 @login_required(login_url='/kittywar/login/')

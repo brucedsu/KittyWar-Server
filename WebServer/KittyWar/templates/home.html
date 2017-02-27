@@ -28,8 +28,24 @@
         <li><a href="{% url 'kittywar:play' %} ">Find Match Here!</a></li>
       </ul>
     </nav>
-
 </header>
+<div id="wrapper">
+    <section>
+        <ul id="gallery">
+            {% for cat in myvar%}
+            <div id=catimg>
+                <img src="{% static "" %}cat/{{cat.title}}.jpg" height="330" width="230"/>
+
+
+                <h4>Name: {{cat.title}}</h4>
+                <h4>Description: {{cat.description}}</h4>
+                <h4>Health: {{cat.health}}</h4>
+                <h4>Default: {{cat.default}}</h4>
+            </div>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
 
 <footer>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
