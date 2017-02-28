@@ -80,6 +80,7 @@ header {
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
   width: 100%;
+
 }
 
 .search_key {
@@ -130,12 +131,7 @@ h1 {
   line-height: 0.8em;
 }
 
-h2 {
-  font-size: 0.75em;
-  /*top; left and right; bottom*/
-  margin: -5px 0 0;
-  font-weight: normal;
-}
+
 
 /*page porfolio*/
 
@@ -187,15 +183,16 @@ h2 {
 /*color*/
 body {
   background-color: #fff;
+  padding-top: 20px;
 }
 
 
 footer {
-  font-size: 0.75em;
+  font-size: 1.0em;
   text-align: center;
   clear: both;
   padding-top: 50px;
-  color:  #000;
+  color:  #fff;
 }
 
 .social-icon {
@@ -224,4 +221,15 @@ nav {
   text-align: center;
 }
 
+#index-title {
+  position: fixed;
+}
+
+#faq {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #9932CC;
+  background: url(cat/funcbg.jpg) ;
+}
 
