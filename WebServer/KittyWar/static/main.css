@@ -2,7 +2,8 @@
 a {
   /*underline of text*/
   text-decoration: none;
-  color: #6ab47b;
+  color: #9932CC;
+  font-size: 1.2em;
 }
 
 h1 {
@@ -137,18 +138,13 @@ h2 {
 }
 
 /*page porfolio*/
-#gallery {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 #gallery li {
   float: left;
+  color: #000;
+  display: inline-block;
   width: 45%;
   margin: 2.5%;
-  background-color: #f5f5f5;
-  color: #bdc3c7;
 }
 
 #gallery li a p {
@@ -210,12 +206,26 @@ footer {
 nav {
   background: url(../img/header-background.jpg);
 }
-/*register html*/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 
+#catimg img{
+  margin: 0;
+  float: left;
+  padding-right: 100px;
+}
 
+#catimg {
+  padding-bottom: 180px;
+}
 
-
-
+#abilityimg {
+  text-align: center;
+}
 
 
