@@ -165,6 +165,7 @@ def home_view(request):
 # Chance Card View
 @login_required(login_url='/kittywar/login/')
 def chance_view(request):
+
     return render(request, 'chance.html')
 
 # play View

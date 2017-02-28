@@ -24,7 +24,7 @@ img {
 
 h3 {
   margin: 0 0 1em 0;
-  color: #bdc3c7;
+  color: #9932CC;
 }
 
 .profile {
@@ -140,18 +140,18 @@ h2 {
 /*page porfolio*/
 
 #gallery li {
-  float: left;
+
   color: #000;
   display: inline-block;
-  width: 45%;
-  margin: 2.5%;
+  width: 40%;
+  margin: 2%;
 }
 
 #gallery li a p {
   margin: 0;
   padding: 5%;
   font-size: 0.75em;
-  color: #bdc3c7;
+  color: #9932CC;
 }
 /*page:about*/
 
@@ -207,11 +207,7 @@ nav {
   background: url(../img/header-background.jpg);
 }
 
-#gallery {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
 
 
 #catimg img{
