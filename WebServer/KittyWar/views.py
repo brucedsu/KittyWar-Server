@@ -158,7 +158,7 @@ def login_mobile_view(request):
 def home_view(request):
     template = 'home.html'
     user_profile = UserProfile.objects.get(user=request.user)
-    print(user_profile.cats.all()[0].title)
+    print(request.user)
     context = {'myvar': user_profile.cats.all()}
     return render(request, template, context)
 
@@ -171,6 +171,21 @@ def chance_view(request):
 @login_required(login_url='/kittywar/login/')
 def play_view(request):
     return render(request, 'play.html')
+
+# ability VIew
+@login_required(login_url='/kittywar/login/')
+def ability_view(request):
+    template = 'ability.html'
+    user_profile = UserProfile.objects.get(user=request.user)
+    usercats = user_profile.cats.all()
+    cat_ability = []
+    for cat in usercats:
+        ability = AbilityCards.objects.get(ability_id=cat.ability_id)
+        print(ability)
+        cat_ability.append(ability)
+
+    context = {'myvar': cat_ability}
+    return render(request, template, context)
 
 # Logout View
 def logout_view(request):

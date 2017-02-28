@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'kittywar/home/$',            views.home_view,            name='home'),
     url(r'kittywar/chance/$',          views.chance_view,          name='chance'),
     url(r'kittywar/play/$',            views.play_view,            name='play'),
+    url(r'kittywar/ability/$',         views.ability_view,            name='ability'),
 ]
